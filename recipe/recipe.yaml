@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: autowrapt
-  version: 1.0
+  version: "2.0.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/autowrapt-${{ version }}.tar.gz
-  sha256: a0dcd0092477bb22e391f136659cc7f716da06ebda66a8b51ae4955cab0f97a2
+  sha256: 7cf4b3aa0984d946fa3158284ce3516339491a267884430d9decc5ff20b0269a
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
